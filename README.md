@@ -20,6 +20,21 @@ To install `ocslogger`, navigate to the directory containing the package and run
 pip install .
 ```
 
+Install from github use:
+
+```bash
+pip install git+https://github.com/ccatp/ocslogger.git
+```
+
+Use in setup.py
+
+``` bash
+install_requires = [
+    "ocslogger @ git+https://github.com/ccatp/ocslogger.git",
+    ]
+```
+]
+```
 ## Usage
 
 1. **Initialize `ocslogger`**:
