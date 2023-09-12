@@ -6,8 +6,9 @@ import logfmter
 
 class Logfmter(logfmter.Logfmter):
     """
-    Custom log formatter class that extends logfmter.Logfmter.
-    It provides a specific timestamp format and filters the allowed keys in the extra argument of logging methods.
+    Custom log formatter class that extends logfmter.Logfmter. It provides a specific
+    timestamp format and filters the allowed keys in the extra argument of logging
+    methods.
     """
 
     """
@@ -30,6 +31,6 @@ class Logfmter(logfmter.Logfmter):
         """
         extras = self.get_extra(record)
         for key in extras.keys():
-            if not key in self._extra_keys:
+            if key not in self._extra_keys:
                 raise KeyError(f"Invalid extra key {key}")
         return super().format(record)
